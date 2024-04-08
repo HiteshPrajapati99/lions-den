@@ -279,7 +279,7 @@ const Contact = () => {
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="1000"
               >
-                <Box
+                {/* <Box
                   sx={{
                     bgcolor: "rgba(255, 255, 255 , 0.3)",
                     p: { xs: 1, md: 2 },
@@ -310,7 +310,7 @@ const Contact = () => {
                       </Typography>
                     </Box>
                   </Box>
-                </Box>
+                </Box> */}
 
                 <Box
                   sx={{
