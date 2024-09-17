@@ -15,10 +15,10 @@ import axios from "axios";
 
 const Home = () => {
   const verfy = localStorage.getItem("auth");
-  useEffect(() => {
-    if (!verfy) navigation("/login");
-  }, []);
   const navigation = useNavigate();
+  // useEffect(() => {
+  //   if (!verfy) navigation("/login");
+  // }, []);
   // const verfy = localStorage.getItem("auth");
 
   const [userData, setuserData] = useState([]);
@@ -27,21 +27,8 @@ const Home = () => {
   const [filterData, setfilterData] = useState([]);
   const [loading, setloading] = useState(false);
 
-  // const getData = async () => {
-  //   const res = await fetch(
-  //     "https://api.thelionsden.co.in/dashboard/data-list",
-  //     {
-  //       method: "GET",
-  //     }
-  //   );
 
-  //   const data = await res.json();
-  //   if (data.s) {
-  //     setuserData(data.r);
-  //   } else {
-  //     setuserData([]);
-  //   }
-  // };
+  
 
   const handleSearch = async () => {
     setloading(true);
@@ -405,7 +392,6 @@ const Home = () => {
           getRowId={(params) => params.id}
           rows={renderData}
           columns={col}
-          hideFooter
           experimentalFeatures={{ clipboardPaste: true }}
           loading={loading}
           sx={{
@@ -416,6 +402,7 @@ const Home = () => {
               fontWeight: "bold",
             },
           }}
+          
         />
       </Box>
     </>
